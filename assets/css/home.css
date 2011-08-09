@@ -1,0 +1,51 @@
+
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	color: #444;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 75%;
+	background: #000 url(../img/back.jpg) repeat-x;
+}
+
+h1 {
+	position: absolute;
+	left: 20px;
+	top: -0.7em;
+	color: #fff;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 7em;
+	text-shadow: 0 1px 0 #999;
+}
+
+h3 {
+	font-size: 1.4em;
+}
+
+p {
+	font-size: 1.2em;
+	margin-bottom: 8px;
+}
+
+.captions {
+	position: absolute;
+	top: 20%;
+	right: 0;
+	width: 300px;
+	z-index: 100;
+}
+
+
+.captions article {
+	position: absolute;
+	top: 0;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding: 10px;
+	background: rgba(255, 255, 255, 0.85);
+}

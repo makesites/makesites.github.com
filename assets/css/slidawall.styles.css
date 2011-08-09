@@ -1,0 +1,49 @@
+#slidawall{
+	position: relative;
+	width: 980px;
+	height: 100%;
+	overflow: visible;
+	margin: 0 auto;
+}
+
+.wall {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 640px;
+	height: 425px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	margin-top: -212px;
+	margin-left: -320px;
+	-webkit-transition: -webkit-transform 1s ease-out;
+	-webkit-transform: rotate3d(0,1,0, 0deg);
+    transition: transform 1s ease-out;
+	transform: rotate3d(0,1,0, 0deg);
+	/* reflection */
+		-webkit-box-reflect:below -80px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.33, rgba(255,255,255,0.1)), to(rgba(255,255,255,0.45)));
+}
+.wall li {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	cursor: pointer;
+}
+.wall li img {
+	width: 640px;
+	height: 425px;
+}
+
+.captions {
+	z-index: 100;
+}
+
+
+.captions article {
+	position: absolute;
+	top: 0;
+	background: #fff;
+}
