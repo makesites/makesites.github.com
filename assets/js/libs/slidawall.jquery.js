@@ -1,6 +1,6 @@
 /*
- * jQuery Slidawall Plugin v0.1
- * http://makesit.es/
+ * jQuery Slidawall Plugin v0.2
+ * http://makesites.org/
  *
  * Copyright 2011, Makis Tracend
  * Licensed under the MIT license.
@@ -11,7 +11,14 @@
 
   var methods = {
      init : function( options ) {
-
+	
+		var settings = {
+			'width': 640,
+			'height': 320,
+			'thumbs': 6,
+			'rows': 2
+		};
+		
        return this.each(function(){
          
          var $this = $(this),
@@ -19,12 +26,18 @@
 		 	 thumbs = wall.find("li"), 
 		 	 captions = $this.find(".captions article"); 
              
+			// updating settings
+			settings.width = wall.width();
+			settings.height = wall.height();
+			settings.thumbs = thumbs.length;
 			 
-			 $this.data('slidawall', {
-               width : wall.width(),
-               height : wall.height(),
-			   thumbs : thumbs.length
-           });
+			// merging custom options with default settings
+			if (options) {
+				$.extend(settings, options);
+			}
+
+			// save the settings for later
+			$this.data('slidawall', settings);
 		 
 		 if( thumbs.length > 0){ 
 			 // find dimensions 
@@ -89,6 +102,7 @@
 		var grids = [
 			{'x': 1, 'y': 1},
 			{'x': 2, 'y': 1},
+			{'x': 3, 'y': 1},
 			{'x': 2, 'y': 2},
 			{'x': 3, 'y': 2},
 			{'x': 3, 'y': 3},
