@@ -4,14 +4,8 @@ $(function(){
 	
 	// if the document is greater than 580px, checking to support mobile version otherwise
 	if (document.width > 580) {
-		setupPages();
+		// setupPages();
 	}
-	
-	
-	
-	
-	
-	
 	// call the localScroll plugin on the document, allowing both x and y scrolling
 	$.localScroll.defaults.axis = 'xy';
 	  
@@ -20,15 +14,17 @@ $(function(){
 		hash: true
 	});
 	
-	
-
-		
-	
-	
 	// if anchors have the rel external, open the link in a new window
 	$('a[rel*=external]').click( function() { 
 		window.open(this.href, '_blank'); return false; 
 	});
+	
+	$('nav a').click( function() { 
+		$('nav a').removeClass('selected');
+		$(this).addClass('selected');
+	});
+	
+	
 	
 	
 // end ready (init) function
@@ -43,32 +39,13 @@ function setupPages() {
 	$('html').addClass('height100');
 	$('body').addClass('height100');
 	
-	// hide all the sections of the process page
-	$('.process-section').hide();
-	// show the first
-	$('section#tools').show();
-	
-	// hide all the sections of the portfolio page
-	$('.portfolio-section').hide();
-	// show the first
-	$('section#web').show();
 	
 	// get the height of the visible window
 	var windowHeight = $(window.top).height();
 	// set any elements with the class restrict-height to 80% of the height
 	$('.restrict-height').css({"height": windowHeight * .7});
 	
-	// set the width of the page-outer-container and the page to the document width - we want the pages to be 100%
-	$('.page-outer-container').css({"width": document.width});
-	$('.page').css({"width": document.width});
-	// hack to be fixed later
-	// if the browser is Chrome, support the 2 up and 3 up tiling architecture.
-	if (isChrome) {
-		$('.page-inner-container').css({"width": document.width * 1});
-	// otherwise, the pages should just go down the window vertically :(
-	} else {
-		$('.page-inner-container').css({"width": document.width * 1});
-	}
+	
 }
 
 /* function to display twitter feed */

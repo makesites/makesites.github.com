@@ -6,15 +6,14 @@
     color: transparent;
 }
 
-/*cite {
-	font-style:normal;
-	font-size:.8em;
-}*/
+html, body {
+	width:100%;
+	height:100%;
+}
 
 body {
 	font-size: 92%;
 	line-height:160%;
-	/* font-family: Helvetica, Arial, sans-serif; */
 	font-family: 'Open Sans', sans-serif;
 	color:#333;
 	font-weight:400;
@@ -29,7 +28,6 @@ h1, h2, h3, h4, h5, h5, header nav ul li {
 	font-weight:400;
 	text-transform:uppercase;
 	text-align:left;
-	
 }
 
 header h1 {
@@ -73,15 +71,8 @@ header h1 {
 	background-position: left 0px;
 	padding: 15px 0 0 55px;
 	margin:10px;
-	/* font-weight: normal; */
 	height:50px;
 }
-
-/*header #master {
-	float:right;
-	margin-right:20%;
-	height: 47px;
-}*/
 
 header #master {
 	position:absolute;
@@ -93,8 +84,6 @@ header nav ul li {
 	float:left;
 	padding:10px 5px;
 }
-
-
 
 h2 {
 	margin:20px 0;
@@ -132,6 +121,7 @@ footer {
 }
 
 .page {
+	position:relative;
 	height:100%;
 	padding:70px 20px;
 	float:left;
@@ -162,13 +152,8 @@ page-content-wrapper {
 
 .page-content-main-full {
 	width:80%;
-	/* padding:0 20px; */
 	margin:20px auto;
 	overflow:auto;
-}
-
-.restrict-height {
-	
 }
 
 aside {
@@ -201,8 +186,6 @@ aside {
 .secondary .tagline {
 	font-size:1.1em;
 	font-weight:700;
-	
-	
 }
 
 .secondary .page-content-wrapper {
@@ -215,11 +198,22 @@ aside {
 	padding:20px;
 }
 
+/*
 .secondary h2 {
 	text-align:center;
 	margin-top:60px;
 	font-size:4em;
 	color:white;
+}
+*/
+
+.secondary h2 {
+	position:absolute;
+	top:40%;
+	left:5%;
+	font-size:16em;
+	color:rgba(255, 255, 255, .2);
+	margin-top:60px;
 }
 
 .secondary .page-content-main-full {
