@@ -7,7 +7,7 @@ $(function(){
 		// setupPages();
 	}
 	// call the localScroll plugin on the document, allowing both x and y scrolling
-	$.localScroll.defaults.axis = 'xy';
+	$.localScroll.defaults.axis = 'y';
 	  
 	// assign the localScroll functionality to the nav ul
 	$('nav#master > ul').localScroll({

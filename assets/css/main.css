@@ -21,9 +21,11 @@ body {
 	text-align: left; 
 }
 
+a.ico-external {
+	background-position:right 5px;
+}
+
 h1, h2, h3, h4, h5, h5, header nav ul li {
-	/* font-family: 'Cantarell', sans-serif; */
-	/*font-family: 'Pontano+Sans', sans-serif;*/
 	font-family: 'Open Sans', sans-serif;
 	font-weight:400;
 	text-transform:uppercase;
@@ -37,7 +39,7 @@ header h1 {
 
 .page h3 {
 	font-size:2.5em;
-	margin:auto;
+	margin:0 auto 20px auto;
 }
 
 .full-circle {
@@ -156,17 +158,6 @@ page-content-wrapper {
 	overflow:auto;
 }
 
-aside {
-	width:35%;
-	margin:20px auto;
-	padding:20px;
-	overflow:auto;
-	webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	float:right;
-}
-
 /* page specific styles */
 
 #home h2 {
@@ -184,8 +175,20 @@ aside {
 }
 
 .secondary .tagline {
-	font-size:1.1em;
-	font-weight:700;
+	font-size:1.8em;
+	line-height:120%;
+	font-weight:600;
+	position:absolute;
+	color:rgba(255, 255, 255, .3);
+	left:5%;
+	bottom:50px;
+}
+
+.secondary cite {
+	font-style:normal;
+	color:rgba(255, 255, 255, .4);
+	font-size:.7em;
+	font-weight:400;
 }
 
 .secondary .page-content-wrapper {
@@ -193,9 +196,9 @@ aside {
 	width:500px;
 	-moz-border-radius:250px;
 	-webkit-border-radius:250px;
-	background-color:rgba(255, 255, 255, .5);
+	background-color:rgba(255, 255, 255, .2);
 	margin:50px auto 0 auto;
-	padding:20px;
+	padding:50px;
 }
 
 /*
@@ -209,11 +212,13 @@ aside {
 
 .secondary h2 {
 	position:absolute;
-	top:40%;
-	left:5%;
-	font-size:16em;
+	top:20%;
+	left:10%;
+	margin: 0 auto;
+	text-align:center;
+	font-size:10em;
 	color:rgba(255, 255, 255, .2);
-	margin-top:60px;
+	
 }
 
 .secondary .page-content-main-full {
@@ -222,7 +227,14 @@ aside {
 	overflow:auto;
 }
 
+.secondary .page-content-main-full p {
+	
+	font-size:1.2em;
+}
 
+.ribbon {
+	z-index:999;
+}
 
 
 
@@ -236,7 +248,40 @@ aside {
 	color:#00f;
 }
 
+@media screen and (max-width: 1024px) {
+	
+.page h3 {
+	font-size:2em;
+	margin:auto;
+}	
+
+.full-circle {
+	height: 150px;
+	-moz-border-radius:75px;
+	-webkit-border-radius:75px;
+ 	width: 150px;
+	text-align:center;
+	font-weight:400;
+	color:#fff;
+}
+}
+
 @media screen and (max-width: 580px) {
+	
+.page h3 {
+	font-size:1.5em;
+	margin:auto;
+}	
+
+.full-circle {
+	height: 100px;
+	-moz-border-radius:50px;
+	-webkit-border-radius: 50px;
+ 	width: 100px;
+	text-align:center;
+	font-weight:400;
+	color:#fff;
+}
 
 page-content-wrapper {
 	width:90%;
