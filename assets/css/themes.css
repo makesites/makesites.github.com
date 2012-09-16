@@ -24,6 +24,18 @@ header nav li a:hover, header nav li a.selected {
 	color:#fff; 
 }
 
+header nav li#steal-link a:hover, header nav li#steal-link a.selected { 
+	background-color:#f259a7;
+}
+
+header nav li#meet-link a:hover, header nav li#meet-link a.selected { 
+	background-color:#62bae4;
+}
+
+header nav li#collab-link a:hover, header nav li#collab-link a.selected { 
+	background-color:#e3ba40;
+}
+
 /* colors */
 
 .bg1 {
@@ -31,13 +43,23 @@ header nav li a:hover, header nav li a.selected {
 }
 
 .bg2 {
-	background-color:rgba(237, 19, 129, 1);
+	background:url(../img/steal.png) no-repeat;
+	background-size:contain;
+	background-position:top right;
+	background-color:rgba(237, 19, 129, 0.8);
 }
 
 .bg3 {
-	background-color:rgba(98, 186, 228, 0.7);
+	background:url(../img/meet.png) no-repeat;
+	background-size:contain;
+	background-position:center 70px;
+	background-color:rgba(98, 186, 228, 0.8);
 }
 
 .bg4 {
-	background-color:rgba(246, 155, 0, 0.7);
+	background:url(../img/collab.png) no-repeat;
+	background-size:contain;
+	background-position:center 70px;
+	background-color:rgba(246, 155, 0, 0.8);
 }
+

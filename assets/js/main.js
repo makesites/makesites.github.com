@@ -10,7 +10,7 @@ $(function(){
 	$.localScroll.defaults.axis = 'y';
 	  
 	// assign the localScroll functionality to the nav ul
-	$('nav#master > ul').localScroll({
+	$('header.top nav > ul, .section-buttons').localScroll({
 		hash: true
 	});
 	
@@ -19,9 +19,19 @@ $(function(){
 		window.open(this.href, '_blank'); return false; 
 	});
 	
-	$('nav a').click( function() { 
+	/*$('nav a').click( function() { 
 		$('nav a').removeClass('selected');
 		$(this).addClass('selected');
+	});*/
+	
+	
+	$('.localScrollLink').click( function () {
+	var myLink = $(this).attr('href');
+	$('nav a').removeClass('selected');
+	//$('nav a' +myClass).addClass('selected');
+	$('nav a:[href='+myLink+']').addClass('selected');
+	console.log("nav a:[href="+myLink+"]");
+	
 	});
 	
 	

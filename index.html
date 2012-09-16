@@ -8,12 +8,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="http://cdn.kdi.co/commons/dev/css/common.css" type="text/css" media="screen">
+<link rel="stylesheet" href="https://raw.github.com/makesites/commons/master/css/common.css" type="text/css" media="screen">
 <link rel="stylesheet" href="http://cdn.kdi.co/commons/dev/css/reset.css" type="text/css" media="screen">
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/themes.css">
 <link rel="stylesheet" href="http://cdn.kdi.co/commons/dev/css/ribbons.css" type="text/css" media="screen">
 <link rel="stylesheet" href="http://cdn.kdi.co/commons/dev/css/colors.css" type="text/css" media="screen">
+<link rel="stylesheet" href="http://cdn.kdi.co/commons/dev/css/bubble.css" type="text/css" media="screen">
 
 <!--[if lt IE 9]>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
@@ -28,77 +29,86 @@
 
 <body>
 <a class="ribbon oh" href="https://github.com/makesites" rel="external"><span class="tag small medium red">Fork on Github</span></a>
-<header>
-  <h1>Makesites</h1>
-  <nav id="master">
+<header class="top">
+  <h1><a href="#home">Makesites</a></h1>
+  <nav>
     <ul>
-      <li><a href="#home" class="localScrollLink selected">Home</a></li>
-      <li><a href="#steal" class="localScrollLink">Steal</a></li>
-      <li><a href="#meet" class="localScrollLink">Meet</a></li>
-      <li><a href="#collab" class="localScrollLink">Collab</a></li>
+      <li id="home-link"><a href="#home" class="localScrollLink selected">Home</a></li>
+      <li id="steal-link"><a href="#steal" class="localScrollLink">Steal</a></li>
+      <li id="meet-link"><a href="#meet" class="localScrollLink">Meet</a></li>
+      <li id="collab-link"><a href="#collab" class="localScrollLink">Collab</a></li>
     </ul>
   </nav>
 </header>
-<div id="main">
-  <!-- <div class="page-outer-container"> -->
-    <!-- <div class="page-inner-container">  -->
-      
-      <!-- pages start here -->
-      <div class="page bg1" id="home">
-        <div class="page-content-wrapper">
-          <h2 class="ir">Home</h2>
-          <section class="page-content-full restrict-height">
-            <div class="copyarea">
-              <h3 id="who"><span>Who?</span></h3>
-              <p>Founded in 2012 in San Francisco, California, <strong>Makesites.org</strong> is a public non-governmental organisation dedicated to endorsing the development of commercial open source online software with a shared mission to drive innovation through collaboration.</p>
-            </div>
-            <div class="copyarea">
-              <h3 id="what"><span>What?</span></h3>
-              <p>Our focus is to provide a commercially tested set of re-usable software components, using open standards like JavaScript and HTML5, at the same time creating awareness for the importance of open source software, accommodating the adoption of open source productions by the business world, and giving people an open invitation to support the development of the projects.</p>
-            </div>
-            <div class="copyarea">
-              <h3 id="why"><span>Why?</span></h3>
-              <p>In a digital society, we believe that online software allows participation and plays a fundamental role in the end experience of all users. Therefore the freedom to use, copy, modify and redistribute online software grants everyone equal rights in the information age.</p>
-            </div>
-            <div class="cl"> 
-              <!-- <p class="tagline">We're not about reinventing the wheel. But we are inclined to build a better one.</p> -->
-              <p class="tagline">Collaborative Commercial Open Source</p>
-            </div>
-          </section>
-        </div>
-      </div>
-      <div class="page bg2 secondary" id="steal"><!-- <a name="steal"></a> -->
-        <h2>Steal</h2>
-        <div class="page-content-wrapper">
-          <section class="page-content-full restrict-height">
-            <p>Look through the public repos and borrow lines you can use in your own project.</p>
-            <p>Visit: <a href="https://github.com/makesites" rel="external" class="ico-external">MakeSites @ Github</a>.</p>
-          </section>
-          <p class="tagline">Good artists copy, great artists steal. <cite style="text-decoration:line-through">Steve Jobs</cite> <cite>Pablo Picasso</cite></p>
-        </div>
-      </div>
-      <div class="page bg3 secondary" id="meet"><!-- <a name="meet"></a> -->
-        <div class="page-content-wrapper">
-          <h2>Meet</h2>
-          <section class="page-content-full restrict-height">
-            <p>Meet with other devs working on our projects. Stay tuned for our hack meetups (coming soon).</p>
-          </section>
-          <p class="tagline">Science arose from poetry... when times change the two can<br>
-            meet again on a higher level as friends. <cite>Goethe</cite></p>
-        </div>
-      </div>
-      <div class="page bg4 secondary" id="collab"><!-- <a name="collab"></a> -->
-        <div class="page-content-wrapper">
-          <h2>Collab</h2>
-          <section class="page-content-full restrict-height">
-            <p>Become part of the development and see your name mentioned in one of these releases.</p>
-            <a href="https://github.com/makesites" rel="external" class="ico-external">Fork any project and start hacking!</a> </section>
-          <p class="tagline">In the long history of humankind (and animal kind, too) those who learned to<br>
-            collaborate and improvise most effectively have prevailed. <cite>Charles Darwin</cite></p>
-        </div>
-      </div>
-    <!-- </div> -->
-  <!-- </div> -->
+<div id="main"> 
+  
+  <!-- pages start here -->
+  <div class="page bg1" id="home">
+    <div class="page-content-wrapper">
+      <h2>Collaborative Commercial Open Source</h2>
+      <section class="page-content restrict-height">
+        <p><strong>Makesites</strong> is a public non-governmental organisation dedicated to the development of web-based software that has wide commercial application and is distributed freely, with a shared mission amongst its members to drive innovation through collaboration. Feel free to&hellip;</p>
+        <ul class="section-buttons">
+          <li id="steal-button"><a href="#steal" class="localScrollLink"><span>Steal</span></a></li>
+          <li id="meet-button"><a href="#meet" class="localScrollLink"><span>Meet</span></a></li>
+          <li id="collab-button"><a href="#collab" class="localScrollLink"><span>Collab</span></a></li>
+        </ul>
+      </section>
+      <p class="tagline"></p>
+    </div>
+  </div>
+  <div class="page bg2 secondary" id="steal"><!-- <a name="steal"></a> -->
+    <h2>Steal</h2>
+    <div class="page-content-wrapper">
+      <section class="page-content restrict-height">
+        <p>In a digital society, online software allows the participation, and plays a fundamental role in the end experience, for all users. Therefore the freedom to use, copy, modify and redistribute online software grants everyone equal rights in the information age.</p>
+        <p>Look through the public repos and find something to use in your projects :)</p>
+        <a class="bubble">Visit MakeSites @ Github.</a> </section>
+      <p class="tagline">Good artists copy, great artists steal. <cite style="text-decoration:line-through">Steve Jobs</cite> <cite>~Pablo Picasso</cite></p>
+    </div>
+  </div>
+  <div class="page bg3 secondary" id="meet"><!-- <a name="meet"></a> -->
+    <div class="page-content-wrapper">
+      <h2>Meet</h2>
+      <section class="page-content restrict-height">
+        <p>We welcome all developers that believe in open standards like JavaScript and HTML5. Maintaining an open community where all members can interact with each other is an ongoing goal.</p>
+        <p>Meet some of our members:</p>
+        <ul class="git-members">
+        <li><a href=""><img src="https://secure.gravatar.com/avatar/ea4139df8a4d0b30b65135dba2a9d397?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="100" height="100" alt=" "></a></li>
+        
+        
+        
+        <li><a href=""><img src="https://secure.gravatar.com/avatar/1a4c1a1beab622fda1ebc8115d98f3dc?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="100" height="100" alt=" "></a></li>
+        
+        <li><a href=""><img src="https://secure.gravatar.com/avatar/1be3b4f6f485e8e531e43bbf9de2b660?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="100" height="100" alt=" "></a></li>
+        
+        
+        </ul>
+      </section>
+      <p class="tagline">Science arose from poetry... when times change the two can<br>
+        meet again on a higher level as friends. <cite>~Goethe</cite></p>
+    </div>
+  </div>
+  <div class="page bg4 secondary" id="collab"><!-- <a name="collab"></a> -->
+    <div class="page-content-wrapper">
+      <h2>Collab</h2>
+      <section class="page-content restrict-height">
+      <p>Our main focus is to provide a set of re-usable &amp; commercially tested components of online software. We work on a range of projects across various technologies but mainly endorse: 
+      <ul class="tagcloud clearfix">
+        <li style="font-size:1em">html5</li>
+        <li style="font-size:1.2em">css3</li>
+        <li style="font-size:2.5em">JavaScript</li>
+        <li style="font-size:1.5em">node.js</li>
+        <li style="font-size:2em">backbone.js</li>
+        <li style="font-size:1.3em">express.js</li>
+      </ul>
+      <p>Most projects are born out of some necessity, to supplement specific (unmet) needs and in true open source tradition we extend an open invitation to anyone interested in supporting their development.</p>
+       
+      </p>
+      <p class="tagline">In the long history of humankind (and animal kind, too) those who learned to<br>
+        collaborate and improvise most effectively have prevailed. <cite>~Charles Darwin</cite></p>
+    </div>
+  </div>
 </div>
 <!-- end main -->
 
