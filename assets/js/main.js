@@ -19,23 +19,12 @@ $(function(){
 		window.open(this.href, '_blank'); return false; 
 	});
 	
-	/*$('nav a').click( function() { 
-		$('nav a').removeClass('selected');
-		$(this).addClass('selected');
-	});*/
-	
-	
 	$('.localScrollLink').click( function () {
 	var myLink = $(this).attr('href');
 	$('nav a').removeClass('selected');
-	//$('nav a' +myClass).addClass('selected');
 	$('nav a:[href='+myLink+']').addClass('selected');
-	console.log("nav a:[href="+myLink+"]");
 	
 	});
-	
-	
-	
 	
 // end ready (init) function
 });
