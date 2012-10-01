@@ -41,7 +41,7 @@
 			var params = _.extend({
 			  type:         'GET',
 			  dataType:     'jsonp',
-			  url:			model.url(),
+			  url:			model.url,
 			  jsonp: 		"jsonpCallback",   // the api requires the jsonp callback name to be this exact name
 			  processData:  false
 			}, options);
@@ -96,7 +96,7 @@
 			var params = _.extend({
 			  type:         'GET',
 			  dataType:     'jsonp',
-			  url:			model.url(),
+			  url:			model.url,
 			  jsonp: 		"jsonpCallback",   // the api requires the jsonp callback name to be this exact name
 			  processData:  false
 			}, options);
