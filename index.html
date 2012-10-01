@@ -68,11 +68,15 @@
       <section class="page-content restrict-height">
         <p><strong>We welcome all developers</strong> who believe in open standards like JavaScript and HTML5. Maintaining an open community where all members can interact with each other is an ongoing goal.</p>
         <p>Meet some of our members:</p>
-        <ul class="git-members">
-          <li><a href="https://github.com/AntonShevchuk" rel="external"><img src="https://secure.gravatar.com/avatar/ea4139df8a4d0b30b65135dba2a9d397?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="57" height="57" alt=" "></a></li>
-          <li><a href="https://github.com/ryndel" rel="external"><img src="https://secure.gravatar.com/avatar/1a4c1a1beab622fda1ebc8115d98f3dc?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="57" height="57" alt=" "></a></li>
-          <li><a href="https://github.com/tracend" rel="external"><img src="https://secure.gravatar.com/avatar/1be3b4f6f485e8e531e43bbf9de2b660?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="57" height="57" alt=" "></a></li>
+        <div id="git-members">
+        <script type="text/x-handlebars-template">
+        <ul>
+        {{#each .}}
+		  <li><a href="{{url}}" rel="external"><img src="{{avatar_url}}" width="57" height="57" alt="{{login}}"></a></li>
+		  {{/each}}
         </ul>
+		</script>
+        </div>
       </section>
       <p class="tagline">Science arose from poetry... when times change the two can<br>
         meet again on a higher level as friends. <cite>~Goethe</cite></p>
@@ -84,15 +88,16 @@
       <section class="page-content restrict-height">
         <p><strong>Our main focus</strong> is to provide a set of re-usable and commercially tested components of online software. 
           We work on a range of projects across various technologies but mainly endorse:</p>
-        <ul class="tagcloud">
-          <li style="font-size:1em"><a href="https://github.com/search?q=makesites+HTML5&amp;repo=&amp;langOverride=&amp;start_value=1&amp;type=Everything&amp;language=" rel="external">html5</a></li>
-          <li style="font-size:1.2em"><a href="https://github.com/search?q=makesites+CSS3&amp;repo=&amp;langOverride=&amp;start_value=1&amp;type=Everything&amp;language=" rel="external">css3</a></li>
-          <li style="font-size:2.5em"><a href="https://github.com/search?q=makesites&amp;type=Everything&amp;language=JavaScript" rel="external">javascript</a></li>
-          <li style="font-size:1.5em"><a href="https://github.com/search?q=makesites+node.js&amp;repo=&amp;langOverride=&amp;start_value=1&amp;type=Everything&amp;language=JavaScript" rel="external">node.js</a></li>
-          <li style="font-size:2em"><a href="https://github.com/search?q=makesites+backbone.js&amp;repo=&amp;langOverride=&amp;start_value=1&amp;type=Everything&amp;language=JavaScript" rel="external">backbone.js</a></li>
-          <li style="font-size:1.3em"><a href="https://github.com/search?q=makesites+express.js&amp;repo=&amp;langOverride=&amp;start_value=1&amp;type=Everything&amp;language=JavaScript" rel="external">express.js</a></li>
-          <li style="font-size:2em"><a href="https://github.com/search?q=makesites+webGL&amp;repo=&amp;langOverride=&amp;start_value=1&amp;type=Everything&amp;language=" rel="external">webGL</a></li>
-        </ul>
+          <div id="tagcloud">
+        <script type="text/x-handlebars-template">
+        <ul>
+		
+		{{#each tags}}
+		  <li style="font-size:{{#fontSize count ../max}}{{/fontSize}}"><a href="https://github.com/search?q=makesites+{{name}}" target="_blank" rel="external">{{name}}</a></li>
+		 {{/each}}
+		</ul>
+		</script>
+        </div>
         <p>Most projects are born out of some necessity, to supplement specific (unmet) needs and in true open source tradition we extend an open invitation to anyone interested in contributing to their development.</p>
          </section>
       <p class="tagline">In the long history of humankind (and animal kind, too) those who learned to<br>
@@ -122,7 +127,7 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.2/jquery.scrollTo.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="assets/js/lib/jquery.localscroll-1.2.7-min.js"></script>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0.beta6/handlebars.min.js"></script>
@@ -130,6 +135,7 @@
 
 <!-- helpers -->
 <script type="text/javascript" src="assets/js/helpers/backbone.app.js"></script>
+<script type="text/javascript" src="assets/js/helpers/handlebars.js"></script>
 
 <!-- app -->
 <script type="text/javascript" src="assets/js/app/models.js"></script>

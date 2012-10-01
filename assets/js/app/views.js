@@ -39,4 +39,39 @@
 		render: function(){}
 	});
 	
+	
+	APP.Views.Users = View.extend({
+		el: "#git-members", 
+		events: {}, 
+		initialize: function(model, options){
+			_.bindAll(this, 'render'); 
+			
+			this.template = Handlebars.compile( $(this.el).find("script").html() );
+			this.render();
+			this.collection.bind('reset', this.render);
+		},
+		render: function(){
+			var html = this.template( this.collection.toJSON() );
+			$(this.el).html( html );
+		}
+	});
+	
+	
+	APP.Views.Tags = View.extend({
+		el: "#tagcloud", 
+		events: {}, 
+		initialize: function(model, options){
+			_.bindAll(this, 'render'); 
+			
+			this.template = Handlebars.compile( $(this.el).find("script").html() );
+			this.render();
+			this.collection.bind('reset', this.render);
+		},
+		render: function(){
+			var html = this.template( { tags: this.collection.toJSON() , max : this.collection.max } );
+			$(this.el).html( html );
+		}
+	});
+	
+	
 })(this._, this.Backbone);

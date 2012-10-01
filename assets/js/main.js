@@ -1,7 +1,7 @@
 var app;
 
 // when logic dependencies are loaded
-$(function() {
+$(document).ready(function() {
 
 	// initialize APP
 	app = new APP();

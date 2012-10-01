@@ -12,10 +12,16 @@
 			"": "index",
 		}, 
 		index: function(){
-			console.log("I'm in index");
-			// do something...
-			//APP.Collections.Main
-			//APP.Views.Main
+			var users = new APP.Collections.Users();
+			var tags = new APP.Collections.Tags();
+			
+			var view = new APP.Views.Users({
+				collection: users
+			});
+			
+			var tagsView = new APP.Views.Tags({
+				collection: tags
+			});
 		}
 		
 	});
