@@ -28,33 +28,17 @@
 	
 	APP.Collections.Users = Backbone.Collection.extend({
   		model: APP.Models.User,
-		url: 'https://api.github.com/orgs/makesites/members',
+		url: 'https://api.github.com/orgs/makesites/members?callback',
 		initialize: function(){
 			// call cache on every state change
 			this.fetch();
 			
-		}, 
-			
-		// override backbone synch to force a jsonp call
-		sync: function(method, model, options) {
-			// Default JSON-request options.
-			var params = _.extend({
-			  type:         'GET',
-			  dataType:     'jsonp',
-			  url:			model.url,
-			  jsonp: 		"jsonpCallback",   // the api requires the jsonp callback name to be this exact name
-			  processData:  false
-			}, options);
-	
-			// Make the request.
-			return $.ajax(params);
 		}
-
 	});
 	
 	APP.Collections.Tags = Backbone.Collection.extend({
   		model: APP.Models.Tag,
-		url: 'https://api.github.com/orgs/makesites/repos?type=public',
+		url: 'https://api.github.com/orgs/makesites/repos?type=public&callback',
 		initialize: function(){
 			// call cache on every state change
 			this.fetch();
@@ -88,23 +72,7 @@
 			this.max = max;
 			
 			return models;
-		}, 
-		
-		// override backbone synch to force a jsonp call
-		sync: function(method, model, options) {
-			// Default JSON-request options.
-			var params = _.extend({
-			  type:         'GET',
-			  dataType:     'jsonp',
-			  url:			model.url,
-			  jsonp: 		"jsonpCallback",   // the api requires the jsonp callback name to be this exact name
-			  processData:  false
-			}, options);
-	
-			// Make the request.
-			return $.ajax(params);
 		}
-
 	});
 
 
