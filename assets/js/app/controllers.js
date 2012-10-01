@@ -15,13 +15,15 @@
 			var users = new APP.Collections.Users();
 			var tags = new APP.Collections.Tags();
 			
-			var view = new APP.Views.Users({
-				collection: users
+			var data = {
+				users : users,
+				tags : tags 
+			}
+			
+			var view = new APP.Views.Main({
+				data: data
 			});
 			
-			var tagsView = new APP.Views.Tags({
-				collection: tags
-			});
 		}
 		
 	});

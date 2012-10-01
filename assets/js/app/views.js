@@ -3,14 +3,32 @@
 	/* Main layout */
 	APP.Views.Main = View.extend({
 		// the template file that's used as a resource for the markup
-		el: "#main", 
-		initialize: function(model, options){ 
+		el: "body", 
+		
+		events: {
+			"click a[rel='external']" : "clickExternal",
+			"click .link": "selectLink",
+		},
+		 
+		initialize: function(options){ 
 			
 			// every function that uses 'this' as the current object should be in here
-			_.bindAll(this, 'render', 'update', 'clickExternal'); 
+			_.bindAll(this, 'render', 'clickExternal', 'selectLink'); 
 			
-			// get the data
-			this.model = model;
+			this.views = {};
+			
+			this.views.users = new APP.Views.Users({
+				collection: options.data.users
+			});
+			
+			this.views.tags = new APP.Views.Tags({
+				collection: options.data.tags
+			});
+			
+			// assign the localScroll functionality to the nav ul
+			$(this.el).find('header.top nav > ul, .section-buttons').localScroll({
+				hash: true
+			});
 			
 			// render the page
 			this.render();
@@ -25,18 +43,27 @@
 			// return the object for reference
 			return this;
 		}, 
-		// Update the view when a new model is sent
-		update: function( model, options ){
-			
+		
+		clickExternal: function(e){
+			e.preventDefault();
+			var href = this.findLink(e.target);
+			window.open(href, '_blank'); return false; 
+		},
+		
+		selectLink: function (e) {
+			var myLink = this.findLink(e.target);
+			$(this.el).find('nav a').removeClass('selected');
+			$(this.el).find('nav a:[href='+myLink+']').addClass('selected');
+		},
+		
+		findLink: function (obj) {
+			if (obj.tagName != "A") {
+				return $(obj).closest("a").attr("href");
+			} else {
+				return $(obj).attr("href");
+			}
 		}
-	});
 	
-	// Section views (duplicate as needed...)
-	APP.Views.Section = View.extend({
-		el: "", 
-		events: {}, 
-		initialize: function(model, options){},
-		render: function(){}
 	});
 	
 	

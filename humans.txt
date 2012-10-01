@@ -1,0 +1,13 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Author: MakeSites  Site: http://makesites.org/  
+/* THANKS */
+  Makis Tracend (https://github.com/tracend)
+  Lyndel Thomas (https://github.com/ryndel)
+  
+/* SITE */
+  Standards: HTML5, CSS3, JavaScript
+  Components: jQuery, Backbone.js, barebones-backbone, commons

@@ -29,10 +29,10 @@
   <h1><a href="#home">Makesites</a></h1>
   <nav>
     <ul>
-      <li id="home-link"><a href="#home" class="localScrollLink selected">Home</a></li>
-      <li id="steal-link"><a href="#steal" class="localScrollLink">Steal</a></li>
-      <li id="meet-link"><a href="#meet" class="localScrollLink">Meet</a></li>
-      <li id="collab-link"><a href="#collab" class="localScrollLink">Collab</a></li>
+      <li id="home-link"><a href="#home" class="link selected">Home</a></li>
+      <li id="steal-link"><a href="#steal" class="link">Steal</a></li>
+      <li id="meet-link"><a href="#meet" class="link">Meet</a></li>
+      <li id="collab-link"><a href="#collab" class="link">Collab</a></li>
     </ul>
   </nav>
 </header>
@@ -45,9 +45,9 @@
       <section class="page-content restrict-height">
         <p><strong>Makesites</strong> is a public non-governmental organisation dedicated to the development of web-based software that has wide commercial application and is distributed freely, with a shared mission amongst its members to drive innovation through collaboration. Feel free to&hellip;</p>
         <ul class="section-buttons">
-          <li id="steal-button"><a href="#steal" class="localScrollLink"><span>Steal</span></a></li>
-          <li id="meet-button"><a href="#meet" class="localScrollLink"><span>Meet</span></a></li>
-          <li id="collab-button"><a href="#collab" class="localScrollLink"><span>Collab</span></a></li>
+          <li id="steal-button"><a href="#steal" class="link"><span>Steal</span></a></li>
+          <li id="meet-button"><a href="#meet" class="link"><span>Meet</span></a></li>
+          <li id="collab-button"><a href="#collab" class="link"><span>Collab</span></a></li>
         </ul>
       </section>
     </div>
@@ -72,7 +72,7 @@
         <script type="text/x-handlebars-template">
         <ul>
         {{#each .}}
-		  <li><a href="{{url}}" rel="external"><img src="{{avatar_url}}" width="57" height="57" alt="{{login}}"></a></li>
+		  <li><a href="https://github.com/{{login}}" rel="external"><img src="{{avatar_url}}" width="57" height="57" alt="{{login}}"></a></li>
 		  {{/each}}
         </ul>
 		</script>
