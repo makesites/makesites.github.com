@@ -28,7 +28,7 @@
 	
 	APP.Collections.Users = Backbone.Collection.extend({
   		model: APP.Models.User,
-		url: 'https://api.github.com/orgs/makesites/members?callback',
+		url: 'https://api.github.com/orgs/makesites/members',
 		initialize: function(){
 			// call cache on every state change
 			this.fetch();
@@ -38,7 +38,7 @@
 	
 	APP.Collections.Tags = Backbone.Collection.extend({
   		model: APP.Models.Tag,
-		url: 'https://api.github.com/orgs/makesites/repos?type=public&callback',
+		url: 'https://api.github.com/orgs/makesites/repos?type=public',
 		initialize: function(){
 			// call cache on every state change
 			this.fetch();
