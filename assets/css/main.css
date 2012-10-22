@@ -178,20 +178,20 @@ header.top nav li a:link, header.top nav li a:visited {
 	color:#336699; 
 }
 
-header.top nav li a:hover, header.top nav li a.selected { 
+header.top nav li a:hover, header.top nav li.active a { 
 	background-color:rgba(0,0,0,0.3); 
 	color:#fff; 
 }
 
-header.top nav li#steal-link a:hover, header.top nav li#steal-link a.selected { 
+header.top nav li#steal-link a:hover, header.top nav li#steal-link.active a { 
 	background-color:#f259a7;
 }
 
-header.top nav li#meet-link a:hover, header.top nav li#meet-link a.selected { 
+header.top nav li#meet-link a:hover, header.top nav li#meet-link.active a { 
 	background-color:#62bae4;
 }
 
-header.top nav li#collab-link a:hover, header.top nav li#collab-link a.selected { 
+header.top nav li#collab-link a:hover, header.top nav li#collab-link.active a { 
 	background-color:#e3ba40;
 }
 

@@ -52,8 +52,8 @@
 		
 		selectLink: function (e) {
 			var myLink = this.findLink(e.target);
-			$(this.el).find('nav a').removeClass('selected');
-			$(this.el).find('nav a:[href='+myLink+']').addClass('selected');
+			$(this.el).find('nav li').removeClass('active');
+			$(this.el).find('nav a:[href='+myLink+']').closest("li").addClass('active');
 		},
 		
 		findLink: function (obj) {

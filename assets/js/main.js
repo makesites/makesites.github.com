@@ -12,5 +12,7 @@ $(function() {
 	
 	// call the localScroll plugin on the document, allowing y scrolling only
 	$.localScroll.defaults.axis = 'y';
+	
+	
 
 });
