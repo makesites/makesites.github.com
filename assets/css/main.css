@@ -92,6 +92,66 @@ p {
 	overflow:hidden;
 }
 
+.scroll-hint {
+	position:absolute;
+	width:80px;
+	height:41px;
+	left:50%;
+	margin-left:-40px;
+	bottom:10px;
+	background: url(../img/arrow.png) no-repeat bottom center;
+	background-size:cover;
+	text-align:right;
+	-webkit-animation:jump 2s infinite;
+}
+
+.scroll-hint a {
+	display:inline-block;
+	text-decoration:none;
+	text-transform:uppercase;
+	-webkit-transform:rotate3d(0, 0, 1, -45deg);
+	transform: rotate3d(0, 0, 1, -45deg);
+	margin:0;
+	padding:0;
+	font-size:.8em;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 10px;
+    }
+    50% {
+        bottom: 5px;
+        
+    }
+    100% {
+        bottom: 10px;
+    }
+}
+
+@-webkit-keyframes jump {
+    0% {
+        bottom: 10px;
+    }
+    50% {
+        bottom: 5px;
+        
+    }
+    100% {
+        bottom: 10px;
+    }
+}
+
+.arrow-down {
+	position:relative;
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #f00;
+	
+}
+
 /* colors */
 
 .bg1 {

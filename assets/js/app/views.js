@@ -26,7 +26,7 @@
 			});
 			
 			// assign the localScroll functionality to the nav ul
-			$(this.el).find('header.top nav > ul, .section-buttons').localScroll({
+			$(this.el).find('header.top nav > ul, .section-buttons, .localscroll').localScroll({
 				hash: true
 			});
 			
