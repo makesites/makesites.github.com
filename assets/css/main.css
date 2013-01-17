@@ -269,7 +269,7 @@ header.top nav li#collab-link a:hover, header.top nav li#collab-link.active a {
 	width:100%;
 	height:100%;
 	padding:70px 20px;
-	overflow:hidden;
+	overflow:scroll;
 }
 
 .secondary {
