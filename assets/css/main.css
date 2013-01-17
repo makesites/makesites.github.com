@@ -569,7 +569,7 @@ ul.section-buttons li a {
 
 html, body {
 	width:100%;
-	height:auto;
+	height:100%;
 }
 	
 #home h2 {
@@ -623,8 +623,8 @@ html, body {
 @media screen and (max-width: 580px) {
 	
 html, body {
-	width:100%;
-	height:auto;
+	width: 100%;
+	height: auto;
 }
 
 p {
@@ -707,6 +707,7 @@ header.top nav li a:link {
 .page.secondary {
 	float:none;
 	padding:20px 0;
+	height: 100%;
 }
 
 .secondary .tagline {
