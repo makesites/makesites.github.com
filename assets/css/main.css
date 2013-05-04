@@ -103,6 +103,10 @@ p {
 	background-size:cover;
 	text-align:right;
 	-webkit-animation:jump 2s infinite;
+	-moz-animation:jump 2s infinite;
+	-ms-animation:jump 2s infinite;
+	-o-animation:jump 2s infinite;
+	animation:jump 2s infinite;
 }
 
 .scroll-hint a {
@@ -110,6 +114,9 @@ p {
 	text-decoration:none;
 	text-transform:uppercase;
 	-webkit-transform:rotate3d(0, 0, 1, -45deg);
+	-moz-transform:rotate3d(0, 0, 1, -45deg);
+	-o-transform:rotate3d(0, 0, 1, -45deg);
+	-ms-transform:rotate3d(0, 0, 1, -45deg);
 	transform: rotate3d(0, 0, 1, -45deg);
 	margin:0;
 	padding:0;
@@ -130,6 +137,45 @@ p {
 }
 
 @-webkit-keyframes jump {
+    0% {
+        bottom: 10px;
+    }
+    50% {
+        bottom: 5px;
+        
+    }
+    100% {
+        bottom: 10px;
+    }
+}
+
+@-moz-keyframes jump {
+    0% {
+        bottom: 10px;
+    }
+    50% {
+        bottom: 5px;
+        
+    }
+    100% {
+        bottom: 10px;
+    }
+}
+
+@-ms-keyframes jump {
+    0% {
+        bottom: 10px;
+    }
+    50% {
+        bottom: 5px;
+        
+    }
+    100% {
+        bottom: 10px;
+    }
+}
+
+@-o-keyframes jump {
     0% {
         bottom: 10px;
     }
