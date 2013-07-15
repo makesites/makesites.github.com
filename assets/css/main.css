@@ -250,13 +250,29 @@ header.top {
 
 header.top h1 {
 	float: left;
-	height:50px;
-	padding: 15px 0 0 55px;
+	/* height:50px; */
 	margin:10px;
+	padding: 12px 0 10px 50px;
 	background-image: url(../img/logo.png);
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: 45px;
 	background-position: left 0px;
+	font-family: 'Orbitron', sans-serif;
+	font-weight: 700;
+	color: #666;
+	text-transform: uppercase;
+	line-height: none;
+	font-size: 2.2em;
+}
+
+h1 em {
+	color: #666;
+	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(50%, rgba(0,0,0,.7)), to(rgba(0,0,0,1)));
+	font-style: normal;
+}
+
+h1 span {
+	color: #1e9fe7;
 }
 
 header.top nav {
