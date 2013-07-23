@@ -1,7 +1,7 @@
 (function(_, Backbone) {
 	
 	/* Main layout */
-	APP.Views.Main = View.extend({
+	APP.Views.Main = APP.View.extend({
 		// the template file that's used as a resource for the markup
 		el: "body", 
 		
@@ -67,7 +67,7 @@
 	});
 	
 	
-	APP.Views.Users = View.extend({
+	APP.Views.Users = APP.View.extend({
 		el: "#git-members", 
 		events: {}, 
 		initialize: function(model, options){
@@ -84,7 +84,7 @@
 	});
 	
 	
-	APP.Views.Tags = View.extend({
+	APP.Views.Tags = APP.View.extend({
 		el: "#tagcloud", 
 		events: {}, 
 		initialize: function(model, options){

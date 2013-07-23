@@ -2,7 +2,7 @@
   
 	// **Models**: Add as many here as needed...
 	
-	APP.Models.Main = Model.extend({
+	APP.Models.Main = APP.Model.extend({
 		defaults: { }, 
 		initialize: function(){
 			// call cache on every state change
@@ -10,7 +10,7 @@
 		}
 	});
 	
-	APP.Models.User = Model.extend({
+	APP.Models.User = APP.Model.extend({
 		defaults: { }, 
 		initialize: function(){
 			// call cache on every state change
@@ -18,7 +18,7 @@
 		}
 	});
 	
-	APP.Models.Tag = Model.extend({
+	APP.Models.Tag = APP.Model.extend({
 		defaults: { }, 
 		initialize: function(){
 			// call cache on every state change
