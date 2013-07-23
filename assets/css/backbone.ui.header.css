@@ -1,0 +1,40 @@
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 900;
+	width: 100%;
+	-webkit-transform: translate(0,0);
+	-moz-transform: translate(0,0);
+	-ms-transform: translate(0,0);
+	-o-transform: translate(0,0);
+	transform: translate(0,0);
+	-webkit-transition: -webkit-transform .5s .5s,background .5s,color .1s;
+	-moz-transition: -moz-transform .5s .5s,background .5s,color .1s;
+	-o-transition: -o-transform .5s .5s,background .5s,color .1s;
+	transition: transform .5s .5s,background .5s,color .1s;
+}
+
+header.detatch {
+	position: fixed;
+	-webkit-transition: -webkit-transform .1s,background .1s,color .1s;
+	-moz-transition: -moz-transform .1s,background .1s,color .1s;
+	-o-transition: -o-transform .1s,background .1s,color .1s;
+	transition: transform .1s,background .1s,color .1s;
+}
+
+header.ui-header-hide {
+	opacity: 0;
+	-webkit-transition: -webkit-transform .2s,background .3s,color .3s,opacity 0 .3s;
+	-moz-transition: -moz-transform .2s,background .3s,color .3s,opacity 0 .3s;
+	-o-transition: -o-transform .2s,background .3s,color .3s,opacity 0 .3s;
+	transition: transform .2s,background .3s,color .3s,opacity 0 .3s;
+}
+
+header.visible {
+	opacity: 1;
+	-webkit-transition: -webkit-transform .2s,background .3s,color .3s;
+	-moz-transition: -moz-transform .2s,background .3s,color .3s;
+	-o-transition: -o-transform .2s,background .3s,color .3s;
+	transition: transform .2s,background .3s,color .3s; 
+}
