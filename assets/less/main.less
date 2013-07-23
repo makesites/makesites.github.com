@@ -5,6 +5,13 @@
 
 .font-face('iconset', '../fonts');
 
+/* variables */
+
+@color-cyan: #3da5ce;
+@color-magenta: #cc3399;
+@color-green: #47a7a0;
+
+
 .clearfix() {
 	zoom: 1;
 	&:before { content: ''; display: block; }
@@ -14,6 +21,13 @@
 html, body {
 	width:100%;
 	height:100%;
+}
+
+body {
+	background-image:url("../img/bg1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 a:link, a:visited {
@@ -225,21 +239,27 @@ p {
 	background:url(../img/steal.png) no-repeat;
 	background-size:contain;
 	background-position:top right;
-	background-color:rgba(237, 19, 129, 0.8);
+	/* background-color:rgba(237, 19, 129, 1);*/
+	background-color:rgba(204,51,153,1); 
+	
 }
 
 .bg3 {
 	background:url(../img/meet.png) no-repeat;
 	background-size:contain;
 	background-position:center 70px;
-	background-color:rgba(98, 186, 228, 0.8);
+	background-color:rgba(98, 186, 228, 1);
+	background-color: #3da5ce;
 }
 
 .bg4 {
 	background:url(../img/collab.png) no-repeat;
 	background-size:contain;
 	background-position:center 70px;
-	background-color:rgba(246, 155, 0, 0.8);
+	background-color:rgba(246, 155, 0, 1);
+	background-color: #47a7a0;
+	
+	
 }
 
 /* header styles */
@@ -356,12 +376,17 @@ header.top nav li#collab-link a:hover, header.top nav li#collab-link.active a {
 	height:auto;
 	overflow-y:auto;
 	overflow-x:hidden;
+	
+	p {
+		color: #fff;
+	}
+	
+	strong {
+		font-weight:600;
+		color:#fff;
+	}
 }
 
-.secondary strong {
-	font-weight:600;
-	color:#000;
-}
 
 .page .page-content-wrapper {
 	width:60%;
