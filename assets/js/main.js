@@ -1,7 +1,6 @@
 var app;
 
 // when logic dependencies are loaded
-// when logic dependencies are loaded
 $(function() {
 	
 	// initialize APP
