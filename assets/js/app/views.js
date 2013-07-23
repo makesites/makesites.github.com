@@ -30,6 +30,11 @@
 				hash: true
 			});
 			
+			header: new APP.Views.Header({
+						detatch : true,
+						hide : true
+			});
+			
 			// render the page
 			this.render();
 			
@@ -66,6 +71,8 @@
 	
 	});
 	
+	APP.Views.Header = Backbone.UI.Header.extend({
+	});
 	
 	APP.Views.Users = APP.View.extend({
 		el: "#git-members", 
