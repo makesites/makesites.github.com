@@ -554,41 +554,46 @@ footer li.html5sf {
 
 /* page specific styles */
 
-#home h2 {
-	text-align:center;
-	text-transform:none;
-	font-size:2.5em;
-	line-height:160%;
-	margin:0 auto;
-}
+#home {
+	min-height: 650px;
 
-#home ul.section-buttons {
-	width:660px;
-	height:200px;
-	list-style-type:none;
-	margin:50px auto 0 auto;
-	padding:0;
-	text-align:center;
-}
+	h2 {
+		text-align:center;
+		text-transform:none;
+		font-size:2.5em;
+		line-height:160%;
+		margin:0 auto;
+	}
 
-#home ul.section-buttons li a {
-	float:left;
-	width:170px;
-	height:170px;
-	font-family: 'Open Sans', sans-serif;
-	font-size:1.2em;
-	border-radius:85px;
-	-moz-border-radius:85px;
-	-webkit-border-radius:85px;
-	margin-right:70px;
-	color:#fff;
-	text-align:center;
-	text-transform:uppercase;
-	text-decoration:none;
-}
+	ul.section-buttons {
+		width:660px;
+		height:200px;
+		list-style-type:none;
+		margin:50px auto 0 auto;
+		padding:0;
+		text-align:center;
+	
+		li a {
+			float:left;
+			width:170px;
+			height:170px;
+			font-family: 'Open Sans', sans-serif;
+			font-size:1.2em;
+			border-radius:85px;
+			-moz-border-radius:85px;
+			-webkit-border-radius:85px;
+			margin-right:70px;
+			color:#fff;
+			text-align:center;
+			text-transform:uppercase;
+			text-decoration:none;
+		}
+	
 
-#home ul.section-buttons li:last-child a {
-	margin-right:0;
+		li:last-child a {
+			margin-right:0;
+		}
+	}
 }
 
 ul.section-buttons li a {
@@ -679,6 +684,12 @@ ul.section-buttons li a {
 
 .secondary .page-content p:first-child {
 	margin-top:20px;
+}
+
+.secondary.background {
+	background-color: transparent;
+	border-top: 5px solid rgba(0,0,0,0.2);
+	border-bottom: 5px solid rgba(0,0,0,0.2);
 }
 
 @media screen and (max-width: 1024px) {

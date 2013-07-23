@@ -20,7 +20,7 @@
 			
 			this.views = {};
 			
-			this.backgrounds = ["bg1.jpg", "bg2.jpg", "bg3.jpg"];
+			this.backgrounds = ["bg1.jpg", "bg2.jpg", "bg3.jpg", "bg4.jpg"];
 			
 			this.pageHeight = $(window).height();
 			
