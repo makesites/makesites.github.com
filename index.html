@@ -7,18 +7,19 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="stylesheet" href="http://cdn.kdi.co/commons/0.4/css/common.css" type="text/css" media="screen">
-<link rel="stylesheet" href="http://cdn.kdi.co/commons/0.4/css/reset.css" type="text/css" media="screen">
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="http://cdn.kdi.co/commons/0.4/css/ribbons.css" type="text/css" media="screen">
-<link rel="stylesheet" href="http://cdn.kdi.co/commons/0.4/css/colors.css" type="text/css" media="screen">
-<link rel="stylesheet" href="http://cdn.kdi.co/commons/0.4/css/bubble.css" type="text/css" media="screen">
-<link rel="stylesheet" href="http://cdn.kdi.co/commons/0.4/css/social-icons-set.css" type="text/css" media="screen">
+<link rel="stylesheet" href="assets/css/common.css" type="text/css" media="screen">
+<!-- link rel="stylesheet" href="http://cdn.kdi.co/commons/0.4/css/reset.css" type="text/css" media="screen" -->
+<!-- link rel="stylesheet" href="assets/css/main.css" -->
+<link type="text/css" href="assets/less/main.less" media="screen" rel="stylesheet/less">
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.3.3/less.min.js"></script>
+
+<!-- link rel="stylesheet" href="http://cdn.kdi.co/commons/0.4/css/ribbons.css" type="text/css" media="screen" -->
+<!-- link rel="stylesheet" href="http://cdn.kdi.co/commons/0.4/css/colors.css" type="text/css" media="screen" -->
+<!-- link rel="stylesheet" href="http://cdn.kdi.co/commons/0.4/css/bubble.css" type="text/css" media="screen" -->
+<!-- link rel="stylesheet" href="http://cdn.kdi.co/commons/0.4/css/social-icons-set.css" type="text/css" media="screen" -->
 <!--[if lt IE 9]>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
 <![endif]-->
-<!-- link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600' rel='stylesheet' type='text/css'>
-<link href="http://fonts.googleapis.com/css?family=Orbitron:300,400,600,700" rel="stylesheet" type="text/css" -->
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|Orbitron:400,700' rel='stylesheet' type='text/css'>
 </head>
@@ -113,8 +114,10 @@
 
 <footer>
   <ul class="social-links">
-    <li><a href="http://www.facebook.com/pages/Make-Sites/179334938749318" rel="external" class="color-60px-facebook ir" title="Visit us on Facebook">Facebook</a></li>
-    <li><a href="https://github.com/makesites" rel="external" class="color-60px-github ir" title="Fork us on Github">Github</a></li>
+    <li><a href="http://www.facebook.com/pages/Make-Sites/179334938749318" rel="facebook" target="_blank" title="Visit us on Facebook"><i aria-hidden="true" data-icon="!"><span class="ab ir">Facebook</span></i></a></li>
+	
+	
+    <li><a href="https://github.com/makesites" rel="github" target="_blank" title="Fork us on Github"><i aria-hidden="true" data-icon="?"><span class="ab ir">Github</span></i></a></li>
   </ul>
   <ul class="kdi-info">
     <li>Makesites is sponsored by K&amp;D Interactive</li>
@@ -122,9 +125,9 @@
     <li><a href="mailto:contact@makesit.es">contact@makesit.es</a></li>
   </ul>
   <ul class="code-links">
-    <li class="html5 ir">HTML5</li>
+    <li><i aria-hidden="true" data-icon="%"><span class="ab ir">HTML5</span></i></li>
     <li class="html5sf ir">San Francisco HTML5</li>
-    <li class="css3 ir">CSS3</li>
+    <li><i aria-hidden="true" data-icon="^"><span class="ab ir">CSS3</span></i></li>
     </ul>
 </footer>
 <!-- libs -->
