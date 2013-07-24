@@ -10,6 +10,7 @@
 @color-cyan: #3da5ce;
 @color-magenta: #e8519a;
 @color-green: #47a7a0;
+@color-orange: #ff9933;
 
 
 .clearfix() {
@@ -245,7 +246,7 @@ p {
 	background-size:contain;
 	background-position:top right;
 	/* background-color:rgba(237, 19, 129, 1);*/
-	background-color: #e8519a;
+	background-color: @color-magenta;
 	
 }
 
@@ -254,7 +255,7 @@ p {
 	background-size:contain;
 	background-position:center 70px;
 	background-color:rgba(98, 186, 228, 1);
-	background-color: #3da5ce;
+	background-color: @color-cyan;
 }
 
 .bg4 {
@@ -262,7 +263,7 @@ p {
 	background-size:contain;
 	background-position:center 70px;
 	background-color:rgba(246, 155, 0, 1);
-	background-color: #47a7a0;
+	background-color: @color-orange;
 	
 	
 }
@@ -356,7 +357,7 @@ header.top nav li#meet-link a:hover, header.top nav li#meet-link.active a {
 }
 
 header.top nav li#collab-link a:hover, header.top nav li#collab-link.active a { 
-	background-color: @color-green;
+	background-color: @color-orange;
 }
 
 #main {
@@ -624,7 +625,7 @@ ul.section-buttons li a {
 }
 
 #home ul.section-buttons li#collab-button a {
-	background-color: @color-green;
+	background-color: @color-orange;
 	margin-right:0;
 }
 
