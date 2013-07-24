@@ -67,7 +67,7 @@
 			// only update closer to the change of the page
 			//if( (diff-index > 0.98) || (diff-index) < 0.1 ){ 
 			console.log("change");
-				$("body").css('background-image', 'url(/assets/img/'+this.backgrounds[index]+')');
+				$("body").css('background-image', 'url(/assets/img/backgrounds/'+this.backgrounds[index]+')');
 			//}
 			
 			/*if ( this.checkVisible($(".page#meet") )) {
