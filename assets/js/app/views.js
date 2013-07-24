@@ -15,14 +15,16 @@
 		 initialize: function(options){ 
 			
 			// every function that uses 'this' as the current object should be in here
-			_.bindAll(this, 'render', 'clickExternal', 'selectLink', 'bgChange');
+			_.bindAll(this, 'render', 'clickExternal', 'selectLink', 'bgChange', 'preloader', 'monitorHeight');
 			$(window).scroll(this.bgChange); 
 			
 			this.views = {};
 			
 			this.backgrounds = ["bg1.jpg", "bg2.jpg", "bg3.jpg", "bg4.jpg"];
 			
-			this.pageHeight = $(window).height();
+			this.preloader();
+			
+			this.monitorHeight();
 			
 			this.views.users = new APP.Views.Users({
 				collection: options.data.users
@@ -57,6 +59,15 @@
 		}, 
 		
 		
+		preloader: function() {
+
+			imageObj = new Image();
+		
+			for(i in this.backgrounds) {
+			 	imageObj.src='/assets/img/backgrounds/'+this.backgrounds[i];
+			 }
+		},
+		
 		bgChange: function() {
 			// pageHeight
 			var st = $(window).scrollTop();
@@ -64,30 +75,18 @@
 			var index = Math.floor( diff );
 			
 			if(typeof this.backgrounds[index] == "undefined") return;
-			// only update closer to the change of the page
-			//if( (diff-index > 0.98) || (diff-index) < 0.1 ){ 
-			console.log("change");
-				$("body").css('background-image', 'url(/assets/img/backgrounds/'+this.backgrounds[index]+')');
-			//}
-			
-			/*if ( this.checkVisible($(".page#meet") )) {
-				// console.log("You can see me");
-				// console.log($(window).height());
-				// console.lgo()
-				$("body").css('background-image', 'url("http://placekitten.com/1900/1200")');
 				
-			}*/
-			
-			
+				$("body").css('background-image', 'url(/assets/img/backgrounds/'+this.backgrounds[index]+')');
 		},
 		
-		//checkVisible: function ( elm ) {
-//    		var vpH = $(window).height(), // Viewport Height
-//        	st = $(window).scrollTop(), // Scroll Top
-//        	y = $(elm).offset().top;
-//
-//    		return (y < (vpH + st));
-//		},
+		monitorHeight: function(){
+			var self = this;
+			this.pageHeight = $(window).height();
+			$(window).resize(function(){
+				console.log("resize");
+				self.pageHeight = $(window).height();
+			});
+		}, 
 		
 		clickExternal: function(e){
 			e.preventDefault();
