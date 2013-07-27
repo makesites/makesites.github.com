@@ -297,7 +297,8 @@ header.top {
 		bottom:5px;
 		
 		ul {
-		 	li {
+		 	
+			li {
 				float:left;
 				padding:10px 5px;
 				
@@ -309,33 +310,31 @@ header.top {
 					-webkit-border-radius:5px;
 					text-decoration:none;
 				}
-				
-				
 			}
 		}
 	}
-}
 
-header.top nav li a:link, header.top nav li a:visited {
-	background-color: rgba(255, 255, 255, 0.9);
-	color: #336699;
-}
+	nav li a:link, nav li a:visited {
+		background-color: rgba(255, 255, 255, 0.9);
+		color: #336699;
+	}
 
-header.top nav li a:hover, header.top nav li.active a { 
-	background-color:rgba(0,0,0,0.3); 
-	color:#fff; 
-}
-
-header.top nav li#steal-link a:hover, header.top nav li#steal-link.active a { 
-	background-color: @color-magenta;
-}
-
-header.top nav li#meet-link a:hover, header.top nav li#meet-link.active a { 
-	background-color: @color-cyan;
-}
-
-header.top nav li#collab-link a:hover, header.top nav li#collab-link.active a { 
-	background-color: @color-orange;
+	nav li a:hover, nav li.active a { 
+		background-color:rgba(0,0,0,0.3); 
+		color:#fff; 
+	}
+	
+	nav li#steal-link a:hover, nav li#steal-link.active a { 
+		background-color: @color-magenta;
+	}
+	
+	nav li#meet-link a:hover, nav li#meet-link.active a { 
+		background-color: @color-cyan;
+	}
+	
+	nav li#collab-link a:hover, nav li#collab-link.active a { 
+		background-color: @color-orange;
+	}
 }
 
 #main {
