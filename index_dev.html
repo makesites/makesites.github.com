@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>makesites.org</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/css/common.css" type="text/css" media="screen">
+<!-- link rel="stylesheet" href="assets/css/main.css" -->
+<link rel="stylesheet" href="assets/css/backbone.ui.header.css" type="text/css" media="screen">
+<link type="text/css" href="assets/less/main.less" media="screen" rel="stylesheet/less">
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.3.3/less.min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+<![endif]-->
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Orbitron:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body data-spy="scroll" data-target=".navbar">
+<a class="ribbon oh" href="https://github.com/makesites" rel="external"><span class="tag small medium red">Fork on Github</span></a>
+<header class="top">
+	<h1><a href="#home"><em>Make<span>sites</span></em></a></h1>
+	<nav class="navbar">
+		<ul class="nav">
+			<li id="home-link"><a href="#home" class="link selected">Home</a></li>
+			<li id="steal-link"><a href="#steal" class="link">Steal</a></li>
+			<li id="meet-link"><a href="#meet" class="link">Meet</a></li>
+			<li id="collab-link"><a href="#collab" class="link">Collab</a></li>
+		</ul>
+	</nav>
+</header>
+<div id="main" class="clearfix"> 
+	
+	<!-- pages start here -->
+	<div class="page bg1" id="home">
+		<div class="page-content-wrapper">
+			<h2>Collaborative Commercial Open Source</h2>
+			<section class="page-content restrict-height">
+				<p><strong>Makesites</strong> is a public non-governmental organization dedicated to the development of web-based software that has wide commercial application and is distributed freely, with a shared mission amongst its members to drive innovation through collaboration. Feel free to&hellip;</p>
+				<ul class="section-buttons">
+					<li id="steal-button"><a href="#steal" class="link"><span>Steal</span></a></li>
+					<li id="meet-button"><a href="#meet" class="link"><span>Meet</span></a></li>
+					<li id="collab-button"><a href="#collab" class="link"><span>Collab</span></a></li>
+				</ul>
+			</section>
+		</div>
+		<div class="scroll-hint localscroll"><a href="#steal">Scroll</a></div>
+	</div>
+	<div class="page secondary background">
+		<div class="page-content-wrapper">
+			<section class="page-content restrict-height">
+				<p class="tagline">Good artists copy, great artists steal.<br>
+					<cite style="text-decoration:line-through">Steve Jobs</cite> <cite>~Pablo Picasso</cite></p>
+			</section>
+		</div>
+	</div>
+	<div class="page bg2 secondary" id="steal">
+		<div class="page-content-wrapper">
+			<h2>Steal</h2>
+			<section class="page-content restrict-height">
+				<p><strong>In a digital society</strong>, online software allows the participation, and plays a fundamental role in the end experience, for all users. Therefore the freedom to use, copy, modify and redistribute online software grants everyone equal rights in the information age.</p>
+				<p>Look through the public repos and find something to use in your projects :)</p>
+				<a href="https://github.com/makesites" rel="external" class="cta">Visit MakeSites at Github</a>
+				
+				<ul class="repos">
+					<li><a href="https://github.com/commons" target="_blank" title="Commons"><span style="background-image: url(assets/img/logos/commons.png)"></span><p>Commons</p></a></li>
+					<li><a href="https://github.com/backbone-ui" target="_blank" title="Backbone UI"><span style="background-image:url(assets/img/logos/backbone-ui.png);"></span><p>Backbone UI</p></a></li>
+					<li><a href="https://github.com/backbone-api" target="_blank" title="Backbone API"><span style="background-image:url(assets/img/logos/backbone-api.png);"></span><p>Backbone API</p></a></li>
+					<li><a href="https://github.com/kisscms" target="_blank" title="KISSCMS"><span style="background-image:url(assets/img/logos/kisscms.png);"></span><p>KISSCMS</p></a></li>
+					<li><a href="https://github.com/brisk-modules" target="_blank" title="Brisk"><span style="background-image:url(assets/img/logos/brisk.png);"></span><p>Brisk</p></a></li>
+				</ul>
+			</section>
+		</div>
+	</div>
+	<div class="page secondary background">
+		<div class="page-content-wrapper">
+			<section class="page-content restrict-height">
+				<p class="tagline">Science arose from poetry... when times change the two can
+					meet again on a higher level as friends. <cite>~Goethe</cite></p>
+			</section>
+		</div>
+	</div>
+	<div class="page bg3 secondary" id="meet">
+		<div class="page-content-wrapper">
+			<h2>Meet</h2>
+			<section class="page-content restrict-height">
+				<p><strong>We welcome all developers</strong> who believe in open standards like JavaScript and HTML5. Maintaining an open community where all members can interact with each other is an ongoing goal.</p>
+				<p>Meet some of our members:</p>
+				<div id="git-members"> 
+					<script type="text/x-handlebars-template">
+        <ul>
+        {{#each .}}
+		  <li><a href="https://github.com/{{login}}" rel="external"><img src="{{avatar_url}}" width="57" height="57" alt="{{login}}"></a></li>
+		  {{/each}}
+        </ul>
+		</script> 
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="page secondary background">
+		<div class="page-content-wrapper">
+			<section class="page-content restrict-height">
+				<p class="tagline">In the long history of humankind those who learned to
+					collaborate and improvise most effectively have prevailed. <cite>~Charles Darwin</cite></p>
+			</section>
+		</div>
+	</div>
+	<div class="page bg4 secondary" id="collab">
+		<div class="page-content-wrapper">
+			<h2>Collab</h2>
+			<section class="page-content restrict-height">
+				<p><strong>Our main focus</strong> is to provide a set of re-usable and commercially tested components of online software. 
+					We work on a range of projects across various technologies but mainly endorse:</p>
+				<div id="tagcloud"> 
+					<script type="text/x-handlebars-template">
+        <ul>
+		
+		{{#each tags}}
+		  <li style="font-size:{{#fontSize count ../max}}{{/fontSize}}"><a href="https://github.com/search?q=makesites+{{name}}" target="_blank" rel="external">{{name}}</a></li>
+		 {{/each}}
+		</ul>
+		</script> 
+				</div>
+				<p>Most projects are born out of some necessity, to supplement specific (unmet) needs and in true open source tradition we extend an open invitation to anyone interested in contributing to their development.</p>
+				 </section>
+		</div>
+	</div>
+	<div class="page secondary background">
+		<div class="page-content-wrapper">
+			<h3></h3>
+		</div>
+	</div>
+</div>
+<!-- end main -->
+
+<footer>
+	<ul class="social-links">
+		<li><a href="http://www.facebook.com/pages/Make-Sites/179334938749318" target="_blank" title="Visit us on Facebook"><i aria-hidden="true" data-icon="!"><span class="ab ir">Facebook</span></i></a></li>
+		<li><a href="https://github.com/makesites" target="_blank" title="Fork us on Github"><i aria-hidden="true" data-icon="?"><span class="ab ir">Github</span></i></a></li>
+	</ul>
+	<ul class="kdi-info">
+		<li>Makesites is sponsored by K&amp;D Interactive</li>
+		<li><a href="http://kdi.co/" rel="external" class="kdi-logo ir">K&amp;D Interactive</a></li>
+		<li><a href="mailto:contact@makesit.es">contact@makesit.es</a></li>
+	</ul>
+</footer>
+<script type="text/javascript" src="http://cdn.kdi.co/js/common/0.3.0/common-min.js"></script> 
+<!-- libs --> 
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> 
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.5/jquery.scrollTo.min.js"></script> 
+<script type="text/javascript" src="assets/js/libs/jquery.localscroll-1.2.7-min.js"></script> 
+<script type="text/javascript" src="assets/js/libs/bootstrap-scrollspy.js"></script> 
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/json3/3.2.4/json3.min.js"></script> 
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script> 
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js"></script> 
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js"></script> 
+<script type="text/javascript" src="//cdn.kdi.co/js/backbone.app/0.9.0/backbone.app-min.js"></script> 
+
+<!-- helpers --> 
+<script type="text/javascript" src="assets/js/helpers/handlebars.js"></script> 
+<script type="text/javascript" src="assets/js/libs/backbone.ui.header.js"></script> 
+
+<!-- app --> 
+<script type="text/javascript" src="assets/js/app/models.js"></script> 
+<script type="text/javascript" src="assets/js/app/views.js"></script> 
+<script type="text/javascript" src="assets/js/app/controllers.js"></script> 
+
+<!-- initialize --> 
+<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>
