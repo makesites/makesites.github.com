@@ -73,7 +73,7 @@
 			var st = $(window).scrollTop();
 			var diff = st/(2*this.pageHeight);
 			var index = Math.floor( diff );
-			
+			console.log(this.pageHeight);
 			if(typeof this.backgrounds[index] == "undefined") return;
 				
 				$("body").css('background-image', 'url(/assets/img/backgrounds/'+this.backgrounds[index]+')');
@@ -83,7 +83,7 @@
 			var self = this;
 			this.pageHeight = $(window).height();
 			$(window).resize(function(){
-				console.log("resize");
+				// console.log("resize");
 				self.pageHeight = $(window).height();
 			});
 		}, 
