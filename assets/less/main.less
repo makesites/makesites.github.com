@@ -2,6 +2,7 @@
 @import "ribbon-tr.less";
 
 .font-face('iconset', '../fonts');
+.font-face('new-june-light', 'http://cdn.kdi.co/fonts');
 
 /* variables */
 
@@ -50,7 +51,7 @@ a:hover {
 body {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 92%;
-	font-weight:400;
+	font-weight: 4pa00;
 	line-height:160%;
 	color:#000;
 	text-align: left; 
@@ -62,9 +63,17 @@ a.ico-external {
 	background-position:right 5px;
 }
 
-h1, h2, h3, h4, h5, h5, header nav ul li {
+h1, h2, h3, h4, h5, h5 {
+	font-family: 'new-june-light', sans-serif;
+	font-weight: bold;
+	text-transform:uppercase;
+	text-align:left;
+	text-rendering: optimizeLegibility;
+}
+
+header nav ul li {
 	font-family: 'Open Sans', sans-serif;
-	font-weight:400;
+	/* font-weight: normal; */
 	text-transform:uppercase;
 	text-align:left;
 	text-rendering: optimizeLegibility;
@@ -107,7 +116,7 @@ p {
 	line-height: 160%;
 	margin: 0 0 10px 0;
 	color: #2c2c2c;
-	font-weight: 200;
+	font-weight: 300;
 	letter-spacing: 1px;
 }
 
@@ -355,6 +364,10 @@ header.top {
 			margin:2% auto;
 			overflow:auto;
 		}
+	}
+	
+	#steal, #meet, #collab {
+		padding: 0px 20px;
 	}
 	
 	.secondary {
@@ -710,11 +723,12 @@ footer {
 	/* position:absolute;
 	left:5%;
 	bottom:20px; */
-	font-family: 'Open Sans', sans-serif;
-	font-size:1.8em;
+	/* font-family: 'Open Sans', sans-serif; */
+	font-family: 'new-june-light';
+	font-size:2.8em;
 	line-height:120%;
 	
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	
 }
 
